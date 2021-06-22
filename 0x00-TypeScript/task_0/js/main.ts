@@ -1,38 +1,38 @@
 interface Student {
-	firstName: string,
-  lastName: string,
-  age: Number,
-  location: string
+  firstName: string;
+  lastName: string;
+  age: number;
+  location: string;
 }
 
 const firstStudent: Student = {
-  firstName: 'Iheb',
-  lastName: 'Chatti',
+  firstName: "Iheb",
+  lastName: "Chatti",
   age: 28,
-  location: 'Tunisia'
+  location: "Tunisia",
 };
+
 const secondStudent: Student = {
-  firstName: 'Gandalf',
-  lastName: 'The Grey',
+  firstName: "Gandalf",
+  lastName: "The Gray",
   age: 60,
-  location: 'Middle earth'
+  location: "Middle Earth",
 };
 
-let studentsList: Array<Student> = [firstStudent, secondStudent];
-
+const studentsList: Array<Student> = [firstStudent, secondStudent];
 
 const body: HTMLBodyElement = document.getElementsByTagName("body")[0];
-  
+
 const table: HTMLTableElement = document.createElement("table");
 const thead: HTMLTableSectionElement = document.createElement("thead");
 const tbody: HTMLTableSectionElement = document.createElement("tbody");
 
 const rowHead: HTMLTableRowElement = thead.insertRow(0);
-const cellName: HTMLTableCellElement = rowHead.insertCell(0);
-const cellLocation: HTMLTableCellElement = rowHead.insertCell(1);
+const cell1Head: HTMLTableCellElement = rowHead.insertCell(0);
+const cell2Head: HTMLTableCellElement = rowHead.insertCell(1);
 
-cellName.innerHTML = "firstName";
-cellLocation.innerHTML = "location";
+cell1Head.innerHTML = "firstName";
+cell2Head.innerHTML = "location";
 
 table.append(thead);
 
