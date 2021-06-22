@@ -22,11 +22,6 @@ export const printTeacher: printTeacherFunction = function (
   return `${firstName.charAt(0)}. ${lastName}`;
 };
 
-
-interface StudentConstructor {
-  new (firstName: string, lastName: string): StudentClassInterface;
-}
-
 interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
