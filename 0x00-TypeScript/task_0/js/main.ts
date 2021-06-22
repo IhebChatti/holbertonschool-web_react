@@ -18,7 +18,7 @@ const secondStudent: Student = {
   location: 'Middle earth'
 };
 
-let studentsList: Student[] = [firstStudent, secondStudent];
+let studentsList: Array<Student> = [firstStudent, secondStudent];
 
 
 const body: HTMLBodyElement = document.getElementsByTagName("body")[0];
