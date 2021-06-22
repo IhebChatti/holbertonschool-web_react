@@ -22,21 +22,30 @@ export const printTeacher: printTeacherFunction = function (
   return `${firstName.charAt(0)}. ${lastName}`;
 };
 
-//---------------------------- TESTS ----------------------------//
-const teacher3: Teacher = {
-  firstName: 'John',
-  fullTimeEmployee: false,
-  lastName: 'Doe',
-  location: 'London',
-  contract: false,
-};
 
-const director1: Directors = {
-  firstName: 'John',
-  lastName: 'Doe',
-  location: 'London',
-  fullTimeEmployee: true,
-  numberOfReports: 17,
-};
+interface StudentConstructor {
+  new (firstName: string, lastName: string): StudentClassInterface;
+}
 
-printTeacher("John", "Doe");
+interface StudentClassInterface {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+export class StudentClass implements StudentClassInterface {
+  firstName: string;
+  lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  workOnHomework(): string {
+    return "Currently working";
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
