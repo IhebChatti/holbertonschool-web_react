@@ -24,15 +24,18 @@ export const printTeacher: printTeacherFunction = function (
 
 
 interface StudentConstructor {
-  new (firstName: string, lastName: string): StudentClassInterface;
+  new(firstName: string, lastName: string): StudentClassInterface;
 }
 
 interface StudentClassInterface {
+  firstName: string;
+  lastName: string;
   workOnHomework(): string;
   displayName(): string;
 }
 
-export class StudentClass implements StudentClassInterface {
+export const StudentClass: StudentConstructor =
+class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
 
@@ -42,29 +45,10 @@ export class StudentClass implements StudentClassInterface {
   }
 
   workOnHomework(): string {
-    return "Currently working";
+    return 'Currently working';
   }
 
   displayName(): string {
     return this.firstName;
   }
 }
-
-//---------------------------- TESTS ----------------------------//
-const teacher3: Teacher = {
-  firstName: 'John',
-  fullTimeEmployee: false,
-  lastName: 'Doe',
-  location: 'London',
-  contract: false,
-};
-
-const director1: Directors = {
-  firstName: 'John',
-  lastName: 'Doe',
-  location: 'London',
-  fullTimeEmployee: true,
-  numberOfReports: 17,
-};
-
-printTeacher("John", "Doe");
