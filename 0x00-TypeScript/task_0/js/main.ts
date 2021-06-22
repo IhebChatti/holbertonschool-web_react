@@ -20,18 +20,19 @@ const secondStudent: Student = {
 
 let studentsList: Student[] = [firstStudent, secondStudent];
 
-const body: HTMLBodyElement = document.getElementsByTagName("body")[0];
 
+const body: HTMLBodyElement = document.getElementsByTagName("body")[0];
+  
 const table: HTMLTableElement = document.createElement("table");
 const thead: HTMLTableSectionElement = document.createElement("thead");
 const tbody: HTMLTableSectionElement = document.createElement("tbody");
 
 const rowHead: HTMLTableRowElement = thead.insertRow(0);
-const cell1Head: HTMLTableCellElement = rowHead.insertCell(0);
-const cell2Head: HTMLTableCellElement = rowHead.insertCell(1);
+const cellName: HTMLTableCellElement = rowHead.insertCell(0);
+const cellLocation: HTMLTableCellElement = rowHead.insertCell(1);
 
-cell1Head.innerHTML = "firstName";
-cell2Head.innerHTML = "location";
+cellName.innerHTML = "firstName";
+cellLocation.innerHTML = "location";
 
 table.append(thead);
 
