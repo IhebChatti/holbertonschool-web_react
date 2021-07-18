@@ -49,12 +49,14 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
-  isLoggedIn: PropTypes.bool,
-};
-
 App.defaultProps = {
   isLoggedIn: false,
+  logOut: () => undefined,
+};
+
+App.propTypes = {
+  isLoggedIn: PropTypes.bool,
+  logOut: PropTypes.func,
 };
 
 export default App;
