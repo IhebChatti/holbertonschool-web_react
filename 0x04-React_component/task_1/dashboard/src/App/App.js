@@ -16,15 +16,15 @@ const listCourses = [
 class App extends Component {
   constructor(props) {
     super(props);
-    this.handleLogout = this.handleLogout.bind(this);
+    this.logOut = this.logOut.bind(this);
   }
   componentDidMount() {
-    window.addEventListener('keydown', this.handleLogout);
+    window.addEventListener('keydown', this.logOut);
   }
   componentWillUnmount() {
-    window.removeEventListener('keydown', this.handleLogout);
+    window.removeEventListener('keydown', this.logOut);
   }
-  handleLogout(e) {
+  logOut(e) {
     if (e.ctrlKey && e.key === 'h') {
       e.preventDefault();
       alert('Logging you out');
